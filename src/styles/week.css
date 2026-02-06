@@ -1,0 +1,211 @@
+/* ------------------- Root Variables (light & dark handled in JS) ------------------- */
+/* ------------------- PAGE ------------------- */
+.weekly-page {
+  padding: 20px 16px;
+  min-height: 100vh;
+}
+
+/* ------------------- HEADER ------------------- */
+.weekly-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.weekly-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* ------------------- ANALYTICS ICON BUTTON ------------------- */
+.analytics-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.analytics-btn:hover {
+  background: darken(var(--accent), 10%);
+  transform: translateY(-1px);
+}
+
+/* ------------------- FORM ------------------- */
+.habit-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.habit-form input {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+.habit-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.add-button {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-button:hover {
+  background: darken(var(--accent), 10%);
+}
+
+.add-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ------------------- GRID ------------------- */
+.habit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .habit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .habit-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ------------------- CARD ------------------- */
+.habit-card {
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.3s ease;
+}
+
+.habit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.habit-card p {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+/* ------------------- DAYS ------------------- */
+.habit-days {
+  margin-bottom: 6px;
+}
+
+.habit-days label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+/* ------------------- CARD BUTTONS ------------------- */
+.habit-card button {
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  margin-right: 6px;
+}
+
+/* Delete button */
+.deltee-habit-btn {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.deltee-habit-btn:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Other buttons (Reset / Edit) */
+.habit-card button:not(.deltee-habit-btn) {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.habit-card button:not(.deltee-habit-btn):hover {
+  background: darken(var(--accent), 10%);
+  border-color: darken(var(--accent), 10%);
+}
+
+/* ------------------- DARK MODE OVERRIDES ------------------- */
+body.dark-mode .weekly-page {
+  background: var(--bg-color);
+}
+
+body.dark-mode .habit-card {
+  background: var(--card-bg);
+}
+
+body.dark-mode .habit-card p {
+  color: var(--text-color);
+}
+
+body.dark-mode .habit-days label {
+  color: var(--muted-text);
+}
+
+body.dark-mode .habit-form input {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .add-button {
+  background: var(--accent);
+}
+
+body.dark-mode .habit-card button:not(.deltee-habit-btn) {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .habit-card button:not(.deltee-habit-btn):hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}

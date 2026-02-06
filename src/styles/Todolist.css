@@ -1,0 +1,184 @@
+/* ===================== PAGE ===================== */
+.todo-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  min-height: 100vh;
+}
+
+.todo-page h1 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* ===================== FORM ===================== */
+.todo-form {
+  position: sticky;
+  bottom: 0;
+  background: var(--bg-color);
+  padding: 16px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.todo-form input {
+  flex: 1 1 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.todo-form button {
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.todo-form button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.todo-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Desktop form layout */
+@media (min-width: 600px) {
+  .todo-form input[type="datetime-local"] {
+    flex: 0 0 220px;
+  }
+
+  .todo-form input[type="text"],
+  .todo-form input:not([type]) {
+    flex: 1;
+  }
+}
+
+/* ===================== LIST HEADINGS ===================== */
+.todo-page h2 {
+  margin: 24px 0 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--muted-text);
+}
+
+/* ===================== TODO ITEM ===================== */
+.todo-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 10px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.todo-item span:first-of-type {
+  font-weight: 500;
+  color: var(--text-color);
+  word-break: break-word;
+}
+
+.todo-item span:last-of-type {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  white-space: nowrap;
+}
+
+/* Checkbox */
+.todo-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* ===================== COMPLETED ===================== */
+.todo-item.completed {
+  opacity: 0.65;
+  background: var(--card-bg);
+}
+
+.todo-item.completed span:first-of-type {
+  text-decoration: line-through;
+  color: var(--muted-text);
+}
+
+/* ===================== EMPTY STATE ===================== */
+.todo-page p {
+  margin-top: 20px;
+  color: var(--muted-text);
+  font-size: 0.95rem;
+}
+
+/* ===================== DELETE BUTTON ===================== */
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted-text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  line-height: 1;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.delete-btn:hover {
+  background: rgba(220, 53, 69, 0.12);
+  color: #dc3545;
+  transform: scale(1.05);
+}
+
+/* Dark mode polish */
+body.dark-mode .delete-btn:hover {
+  background: rgba(220, 53, 69, 0.18);
+}
+
+
+
+/* ===================== MOBILE ADJUSTMENTS ===================== */
+@media (max-width: 480px) {
+  .todo-item {
+    grid-template-columns: auto 1fr;
+    row-gap: 6px;
+  }
+
+  .todo-item span:last-of-type {
+    grid-column: 2;
+    font-size: 0.8rem;
+  }
+
+  .todo-form {
+    padding: 12px;
+  }
+    .delete-btn {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,117 @@
+/* Container */
+.weeklyAnalyticspage {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #111827;
+}
+
+.weeklyAnalyticspage h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Grid */
+.analytics-grid-con {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Card */
+.anayltics-card-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anayltics-card-con:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex layout for larger screens */
+@media (min-width: 600px) {
+  .anayltics-card-con {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+/* Text side */
+.analytics-info {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 600px) {
+  .analytics-info {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.analytics-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+.analytics-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Progress */
+.progress-wrapper {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .progress-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .analytics-grid-con {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .progress-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Empty state */
+.weeklyAnalyticspage p {
+  text-align: center;
+  font-size: 1rem;
+  color: #9ca3af;
+  margin-top: 1rem;
+}
+
+/* Overall aesthetics */
+.anayltics-card-con p.motivation {
+  font-weight: 500;
+  color: #4f46e5; /* Purple highlight for motivation */
+  font-size: 0.95rem;
+  margin-top: 8px;
+}

@@ -1,0 +1,85 @@
+/* ------------------- Home Content ------------------- */
+.home-content {
+  max-width: 900px;
+  margin: 80px auto 0;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* Welcome text */
+.home-content h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text-color); /* Light mode text color */
+}
+
+/* Paragraph text */
+.home-content p {
+  font-size: 1.05rem;
+  color: var(--muted-text);
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.home-content a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  margin: 8px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.home-content a:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ------------------- Dark Mode ------------------- */
+body.dark-mode {
+  background-color: var(--bg-color); /* dark background from your variables */
+  color: var(--text-color);           /* white text from your variables */
+}
+
+body.dark-mode .home-content h1 {
+  color: var(--text-color); /* heading color in dark mode */
+}
+
+body.dark-mode .home-content p {
+  color: var(--muted-text); /* paragraph color in dark mode */
+}
+
+body.dark-mode .home-content a {
+  background: var(--card-bg);      /* dark button background */
+  color: var(--text-color);        /* white text */
+  border: 1px solid var(--border-color); /* white border */
+}
+
+body.dark-mode .home-content a:hover {
+  background: var(--accent);  /* purple hover from your variable */
+  border-color: var(--accent);
+  color: var(--text-color);    /* keep white text */
+  transform: translateY(-2px);
+}
+
+/* ------------------- Mobile ------------------- */
+@media (max-width: 600px) {
+  .home-content {
+    margin-top: 56px;
+    padding: 0 16px;
+  }
+
+  .home-content a {
+    width: 100%;
+    max-width: 280px;
+  }
+}

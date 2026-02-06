@@ -1,0 +1,63 @@
+.onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.onboarding-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* FORCE readable text in dark mode */
+body.dark-mode .onboarding-card h1,
+body.dark-mode .onboarding-card p {
+  color: #ffffff;
+}
+
+.logo-placeholder {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: var(--accent);
+}
+
+.onboarding-card p {
+  color: var(--muted-text);
+  margin-bottom: 20px;
+}
+
+/* Input + button FIX */
+.onboarding-card input,
+.onboarding-card button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.onboarding-card input {
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.onboarding-card button {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
