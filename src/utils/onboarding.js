@@ -4,7 +4,7 @@
     type: "welcome",
     title: "Welcome to RHYTHM",
     description: "Great to have you here.",
-    logo: true,                 // placeholder for now
+    logo: true,
     buttonText: "Continue"
   },
   {
@@ -12,7 +12,7 @@
     type: "value",
     title: "Find your rhythm",
     description: "Build consistency. Track your rhythm.",
-    illustration: true,         // optional image later
+    illustration: true,         
     buttonText: "Next"
   },
   {

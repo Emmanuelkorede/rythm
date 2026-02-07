@@ -91,6 +91,18 @@ function Weekly() {
     setGoals(updatedGoals)
 
   }
+
+  function formatTime(time) {
+  if (!time) return '';
+  const [hours, minutes] = time.split(':');
+  const date = new Date();
+  date.setHours(hours, minutes);
+  return date.toLocaleTimeString([], {
+    hour: 'numeric',
+    minute: '2-digit'
+  });
+}
+
   
 
   return (
@@ -121,6 +133,7 @@ function Weekly() {
       HandleKeypressDisplay={HandleKeypressDisplay}
       selectedTime={selectedTime}
       editGoals={editGoals}
+      formatTime={formatTime}
      />
     </div>
     </>

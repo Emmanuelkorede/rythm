@@ -17,7 +17,7 @@ function NormalHomeContent() {
           <h1>Welcome back {name} 👋</h1>
           <p>{getRandomMessage(homeMotivation)}.</p>
 
-          <NavLink to="/week">Start Tracking</NavLink>
+          <NavLink to="/week">Track Weekly Habits</NavLink>
           <NavLink to="/weekanalytics">View anyaltics</NavLink>
           <NavLink to="/Todolist">Go to ToDo List</NavLink>
         </div>

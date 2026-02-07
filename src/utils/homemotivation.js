@@ -1,4 +1,3 @@
-// src/utils/homeMotivation.js
 
 export const homeMotivation = [
   "🌱 Small steps today create big change tomorrow.",

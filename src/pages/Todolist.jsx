@@ -2,24 +2,50 @@ import { Navbar } from "../components/Navbar";
 import { useEffect, useState } from "react";
 import { handleKeyPressForm } from "../components/handleKeyPress";
 import "../styles/Todolist.css";
+import { FaClock } from "react-icons/fa";
 
-/* ===================== FORM ===================== */
+/*  FORM  */
 function Form({ input, setInput, reminder, setReminder, addTask }) {
   return (
     <div className="todo-form">
+
+      {/* Task input */}
       <input
+        type="text"
         placeholder="Add a task"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => handleKeyPressForm(e, addTask, setInput)}
       />
 
-      <input
-        type="datetime-local"
-        value={reminder}
-        onChange={(e) => setReminder(e.target.value)}
-      />
+      {/* Reminder picker */}
+      <div className="reminder-picker">
+        <button
+          type="button"
+          className="reminder-icon"
+          onClick={() =>
+            document.getElementById("task-reminder-input").showPicker()
+          }
+          aria-label="Pick reminder datetime"
+        >
+          <FaClock />
+        </button>
 
+        <input
+          id="task-reminder-input"
+          type="datetime-local"
+          value={reminder}
+          onChange={(e) => setReminder(e.target.value)}
+        />
+
+        {reminder && (
+          <span className="reminder-label">
+            {new Date(reminder).toLocaleString()}
+          </span>
+        )}
+      </div>
+
+      {/* Add task button */}
       <button onClick={addTask} disabled={!input.trim()}>
         Add
       </button>
@@ -27,7 +53,7 @@ function Form({ input, setInput, reminder, setReminder, addTask }) {
   );
 }
 
-/* ===================== DISPLAY ===================== */
+/*  DISPLAY  */
 function Display({ tasks, formatDateTime, toggleTask, deleteTask }) {
   const activeTasks = tasks.filter(task => !task.completed);
   const completedTasks = tasks.filter(task => task.completed);
@@ -99,7 +125,7 @@ function Display({ tasks, formatDateTime, toggleTask, deleteTask }) {
 }
 
 
-/* ===================== MAIN PAGE ===================== */
+/*  MAIN PAGE  */
 function Todolist() {
   const [tasks, setTasks] = useState(() => {
     const saved = localStorage.getItem("tasks");

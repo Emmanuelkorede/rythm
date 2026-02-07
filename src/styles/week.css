@@ -1,11 +1,10 @@
-/* ------------------- Root Variables (light & dark handled in JS) ------------------- */
-/* ------------------- PAGE ------------------- */
+/*  PAGE  */
 .weekly-page {
   padding: 20px 16px;
   min-height: 100vh;
 }
 
-/* ------------------- HEADER ------------------- */
+/*  HEADER  */
 .weekly-header {
   display: flex;
   align-items: center;
@@ -19,7 +18,7 @@
   color: var(--text-color);
 }
 
-/* ------------------- ANALYTICS ICON BUTTON ------------------- */
+/*  ANALYTICS ICON BUTTON  */
 .analytics-btn {
   display: flex;
   align-items: center;
@@ -39,7 +38,7 @@
   transform: translateY(-1px);
 }
 
-/* ------------------- FORM ------------------- */
+/*  FORM  */
 .habit-form {
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +83,55 @@
   cursor: not-allowed;
 }
 
-/* ------------------- GRID ------------------- */
+/*  TIME PICKER  */
+.time-picker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.time-picker input[type="time"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Clock icon button */
+.time-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--muted-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-icon:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.time-label {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  min-width: 48px;
+}
+
+body.dark-mode .time-icon {
+  background: var(--card-bg);
+  color: var(--muted-text);
+}
+
+
+/*  GRID  */
 .habit-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -103,7 +150,7 @@
   }
 }
 
-/* ------------------- CARD ------------------- */
+/*  CARD  */
 .habit-card {
   background: var(--card-bg);
   padding: 16px;
@@ -123,7 +170,7 @@
   color: var(--text-color);
 }
 
-/* ------------------- DAYS ------------------- */
+/*  DAYS  */
 .habit-days {
   margin-bottom: 6px;
 }
@@ -136,7 +183,7 @@
   color: var(--muted-text);
 }
 
-/* ------------------- CARD BUTTONS ------------------- */
+/*  CARD BUTTONS  */
 .habit-card button {
   padding: 8px 16px;
   border: 1px solid transparent;
@@ -159,7 +206,7 @@
   border-color: #dc2626;
 }
 
-/* Other buttons (Reset / Edit) */
+
 .habit-card button:not(.deltee-habit-btn) {
   background: var(--accent);
   color: white;
@@ -171,7 +218,7 @@
   border-color: darken(var(--accent), 10%);
 }
 
-/* ------------------- DARK MODE OVERRIDES ------------------- */
+/*  DARK MODE OVERRIDES  */
 body.dark-mode .weekly-page {
   background: var(--bg-color);
 }

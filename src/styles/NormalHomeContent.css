@@ -1,4 +1,4 @@
-/* ------------------- Home Content ------------------- */
+/*  Home Content  */
 .home-content {
   max-width: 900px;
   margin: 80px auto 0;
@@ -11,7 +11,7 @@
   font-size: clamp(1.9rem, 4vw, 2.6rem);
   font-weight: 700;
   margin-bottom: 14px;
-  color: var(--text-color); /* Light mode text color */
+  color: var(--text-color);
 }
 
 /* Paragraph text */
@@ -44,34 +44,34 @@
   transform: translateY(-2px);
 }
 
-/* ------------------- Dark Mode ------------------- */
+/*  Dark Mode  */
 body.dark-mode {
-  background-color: var(--bg-color); /* dark background from your variables */
-  color: var(--text-color);           /* white text from your variables */
+  background-color: var(--bg-color); 
+  color: var(--text-color);           
 }
 
 body.dark-mode .home-content h1 {
-  color: var(--text-color); /* heading color in dark mode */
+  color: var(--text-color); 
 }
 
 body.dark-mode .home-content p {
-  color: var(--muted-text); /* paragraph color in dark mode */
+  color: var(--muted-text); 
 }
 
 body.dark-mode .home-content a {
-  background: var(--card-bg);      /* dark button background */
-  color: var(--text-color);        /* white text */
-  border: 1px solid var(--border-color); /* white border */
+  background: var(--card-bg);      
+  color: var(--text-color);        
+  border: 1px solid var(--border-color); 
 }
 
 body.dark-mode .home-content a:hover {
-  background: var(--accent);  /* purple hover from your variable */
+  background: var(--accent);  
   border-color: var(--accent);
-  color: var(--text-color);    /* keep white text */
+  color: var(--text-color);
   transform: translateY(-2px);
 }
 
-/* ------------------- Mobile ------------------- */
+/*  Mobile  */
 @media (max-width: 600px) {
   .home-content {
     margin-top: 56px;

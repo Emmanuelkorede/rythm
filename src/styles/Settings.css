@@ -1,4 +1,4 @@
-/* ------------------- Root Variables ------------------- */
+/*  Root Variables ------------------- */
 :root {
   --bg-color: #f8fafc;
   --card-bg: #ffffff;
@@ -25,7 +25,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ------------------- BACK BUTTON ------------------- */
+/*  BACK BUTTON  */
 .back-btn {
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* ------------------- SETTINGS PAGE ------------------- */
+/*  SETTINGS PAGE  */
 .settings {
   max-width: 900px;
   margin: 0 auto 40px;
@@ -56,7 +56,7 @@ body {
   gap: 24px;
 }
 
-/* ------------------- SECTION CARDS ------------------- */
+/*  SECTION CARDS  */
 .settings-profile,
 .appearance,
 .suggestions,
@@ -79,7 +79,7 @@ body {
   color: var(--text-color);
 }
 
-/* ------------------- PROFILE EDIT ------------------- */
+/*  PROFILE EDIT  */
 .view-profile h2 {
   display: inline-block;
   margin-right: 12px;
@@ -109,7 +109,7 @@ body {
 .edit-profile {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px; /* space between input and buttons */
+  gap: 8px; 
   align-items: center;
 }
 
@@ -130,7 +130,7 @@ body {
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
-/* ------------------- APPEARANCE ------------------- */
+/*  APPEARANCE  */
 .appearance p {
   margin-top: 0;
   margin-bottom: 12px;
@@ -171,7 +171,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* ------------------- FEEDBACK ------------------- */
+/*  FEEDBACK  */
 .suggestions button {
   padding: 10px 14px;
   border-radius: 8px;
@@ -232,7 +232,6 @@ body {
   font-weight: 500;
 }
 
-/* Active state for yes/no */
 .active-yes {
   background-color: #d4edda !important;
   border-color: #28a745 !important;
@@ -251,7 +250,7 @@ body {
   border-color: var(--accent);
 }
 
-/* ------------------- DATA CONTROLS ------------------- */
+/*  DATA CONTROLS  */
 .reset-actions button {
   padding: 10px 14px;
   border-radius: 8px;
@@ -277,7 +276,7 @@ body {
   border-color: var(--accent);
 }
 
-/* ------------------- CONFIRMATION DIALOG ------------------- */
+/*  CONFIRMATION DIALOG  */
 .confirmation-dialog {
   position: fixed;
   top: 50%;
@@ -324,7 +323,7 @@ body {
   padding: 6px 8px;
 }
 
-/* ------------------- RESPONSIVE ------------------- */
+/*  RESPONSIVE  */
 @media (max-width: 600px) {
   .edit-profile {
     flex-direction: column;

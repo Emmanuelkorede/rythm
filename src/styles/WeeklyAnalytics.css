@@ -108,10 +108,9 @@
   margin-top: 1rem;
 }
 
-/* Overall aesthetics */
 .anayltics-card-con p.motivation {
   font-weight: 500;
-  color: #4f46e5; /* Purple highlight for motivation */
+  color: #4f46e5; 
   font-size: 0.95rem;
   margin-top: 8px;
 }
